@@ -12,8 +12,10 @@ import hamburger from "@svg/hamburger.svg";
 import Button from "@components/Button.astro";
 import CardExperience from "@components/CardExperience.astro";
 import SocialMediaTag from "@components/SocialMediaTag.astro";
-import { experienceItems } from "@constants/experienceItems";
 import InfiniteSliderSkills from "@components/InfiniteSliderSkills.astro";
+import { experienceItems } from "@constants/experienceItems";
+import { servicesItems } from "@constants/servicesItem";
+import CardServices from "@components/CardServices.astro";
 ---
 
 <Layout>
@@ -175,6 +177,23 @@ import InfiniteSliderSkills from "@components/InfiniteSliderSkills.astro";
         Stack Tecnológico
       </h2>
       <InfiniteSliderSkills />
+    </section>
+    <section
+      id="services-section"
+      class="max-w-screen-xl px-5 w-full flex flex-col justify-center items-center gap-8 my-8"
+    >
+      <h2 class="text-2xl sm:text-3xl md:text-4xl text-left font-medium w-full">
+        ¿Empezamos a trabajar?
+      </h2>
+      <p
+        class="text-left text-txt-custom-gray w-full text-base sm:text-lg font-light"
+      >
+        Encuentra el servicio ideal para tus necesidades y comienza tu proyecto
+        conmigo.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {servicesItems.map((service) => <CardServices {...service} />)}
+      </div>
     </section>
   </main>
 </Layout>
