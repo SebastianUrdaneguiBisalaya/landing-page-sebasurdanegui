@@ -1,5 +1,5 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "@layouts/Layout.astro";
 import lineSvg from "@svg/line.svg";
 import spanishIcon from "@svg/spanish.svg";
 import englishIcon from "@svg/english.svg";
@@ -13,6 +13,7 @@ import Button from "@components/Button.astro";
 import CardExperience from "@components/CardExperience.astro";
 import SocialMediaTag from "@components/SocialMediaTag.astro";
 import { experienceItems } from "@constants/experienceItems";
+import InfiniteSliderSkills from "@components/InfiniteSliderSkills.astro";
 ---
 
 <Layout>
@@ -130,6 +131,9 @@ import { experienceItems } from "@constants/experienceItems";
       id="experience-section"
       class="max-w-screen-xl px-5 w-full flex flex-col justify-center items-center gap-8 my-8"
     >
+      <h2 class="text-2xl sm:text-3xl md:text-4xl text-left font-medium w-full">
+        Experiencia
+      </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-0">
         {
           experienceItems.map((experience, index) => {
@@ -167,7 +171,10 @@ import { experienceItems } from "@constants/experienceItems";
       id="skills-section"
       class="max-w-screen-xl px-5 w-full flex flex-col justify-center items-center gap-8 my-8"
     >
-      <div></div>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl text-left font-medium w-full">
+        Stack Tecnológico
+      </h2>
+      <InfiniteSliderSkills />
     </section>
   </main>
 </Layout>
