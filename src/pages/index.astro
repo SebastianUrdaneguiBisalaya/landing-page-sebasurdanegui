@@ -18,6 +18,8 @@ import { servicesItems } from "@constants/servicesItem";
 import { contactItems } from "@constants/contactItems";
 import CardServices from "@components/CardServices.astro";
 import CardContact from "@components/CardContact.astro";
+import { projectsItems } from "@constants/projectsItems";
+import TagProjects from "@components/TagProjects.astro";
 ---
 
 <Layout>
@@ -181,6 +183,23 @@ import CardContact from "@components/CardContact.astro";
       <InfiniteSliderSkills />
     </section>
     <section
+      id="projects-section"
+      class="max-w-screen-xl px-5 w-full flex flex-col justify-center items-center gap-8 my-8"
+    >
+      <h2 class="text-2xl sm:text-3xl md:text-4xl text-left font-medium w-full">
+        Mis Proyectos
+      </h2>
+      <div
+        class="flex flex-row gap-4 justify-start items-center w-full overflow-x-scroll snap-proximity snap-x hidden-scroll"
+      >
+        {projectsItems.map((projectTag) => <TagProjects title={projectTag} />)}
+      </div>
+      <div
+        class="flex flex-row gap-4 justify-start items-center w-full overflow-x-scroll snap-mandatory snap-x hidden-scroll"
+      >
+      </div>
+    </section>
+    <section
       id="services-section"
       class="max-w-screen-xl px-5 w-full flex flex-col justify-center items-center gap-8 my-8"
     >
@@ -210,6 +229,15 @@ import CardContact from "@components/CardContact.astro";
     </section>
   </main>
 </Layout>
+
+<style>
+  .hidden-scroll {
+    scrollbar-width: none;
+  }
+  .hidden-scroll::-webkit-scrollbar {
+    display: none;
+  }
+</style>
 
 <script>
   const menuHamburger = document.querySelector("#hamburger-icon");

@@ -1,0 +1,35 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+  tags: {
+    image: string;
+    title: string;
+    alt: string;
+  }[];
+}
+const { title, description, image, tags } = Astro.props as Props;
+import TagProgrammingLanguage from "@components/TagProgrammingLanguage.astro";
+import linkedinIcon from "@svg/linkedin.svg";
+import githubIcon from "@svg/github.svg";
+---
+
+<div class="">
+  <div>
+    <img src="" alt="" />
+  </div>
+  <p>{title}</p>
+  <p>{description}</p>
+  <div class="">
+    {tags.map((tag) => <TagProgrammingLanguage {...tag} />)}
+  </div>
+  <div class="flex flex-row gap-2 justify-end items-center">
+    <span>
+      <img src={linkedinIcon.src} alt="LinkedIn Profile" />
+    </span>
+    <span>
+      <img src={githubIcon.src} alt="GitHub Profile" />
+    </span>
+  </div>
+</div>
