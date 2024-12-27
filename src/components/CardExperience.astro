@@ -1,0 +1,24 @@
+---
+interface Props {
+  title: string;
+  company: string;
+  fromDate: string;
+  toDate: string;
+  description: string[];
+}
+const { title, company, fromDate, toDate, description } = Astro.props as Props;
+---
+
+<div class="font-bricolage-grotesque">
+  <p class="text-base sm:text-lg font-bold leading-relaxed">{title}</p>
+  <p class="text-base sm:text-lg font-light leading-relaxed">{company}</p>
+  <p class="text-base sm:text-lg font-light leading-relaxed">
+    {fromDate} - {toDate}
+  </p>
+  <br />
+  {
+    description.map((item) => (
+      <p class="text-base sm:text-lg font-light leading-relaxed">• {item}</p>
+    ))
+  }
+</div>

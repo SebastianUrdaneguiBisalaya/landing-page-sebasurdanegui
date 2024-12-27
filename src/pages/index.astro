@@ -7,9 +7,12 @@ import linkedinIcon from "@svg/linkedin.svg";
 import githubIcon from "@svg/github.svg";
 import mediumIcon from "@svg/medium.svg";
 import tableauIcon from "@svg/tableau.svg";
+import workIcon from "@svg/work.svg";
 import hamburger from "@svg/hamburger.svg";
 import Button from "@components/Button.astro";
+import CardExperience from "@components/CardExperience.astro";
 import SocialMediaTag from "@components/SocialMediaTag.astro";
+import { experienceItems } from "@constants/experienceItems";
 ---
 
 <Layout>
@@ -69,8 +72,11 @@ import SocialMediaTag from "@components/SocialMediaTag.astro";
       </ul>
     </div>
   </header>
-  <main class="flex justify-center items-center pt-[calc(100px+1rem)] z-40">
+  <main
+    class="flex flex-col justify-center items-center pt-[calc(100px+1rem)] z-40"
+  >
     <section
+      id="hero-section"
       class="relative max-w-screen-xl px-5 w-full flex flex-col justify-center items-center gap-8 my-8 bg-[url('/patterndesign.svg')] bg-no-repeat bg-center bg-cover"
     >
       <div class="w-28 md:w-36 h-28 md:h-36">
@@ -118,6 +124,43 @@ import SocialMediaTag from "@components/SocialMediaTag.astro";
           <SocialMediaTag svg={mediumIcon.src} alt="Medium Profile" href="" />
           <SocialMediaTag svg={tableauIcon.src} alt="Tableau Profile" href="" />
         </div>
+      </div>
+    </section>
+    <section
+      id="experience-section"
+      class="max-w-screen-xl px-5 w-full flex flex-col justify-center items-center gap-8 my-8"
+    >
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-0">
+        {
+          experienceItems.map((experience, index) => {
+            return (
+              <div
+                class={`${
+                  index === 0
+                    ? "relative md:col-start-1 md:row-start-1 px-8 border-l-2 md:border-l-0 md:border-r-2 border-l-gray-custom md:border-r-gray-custom"
+                    : index === 1
+                      ? "relative md:col-start-2 md:row-start-2 px-8 border-l-2 border-l-gray-custom md:-ml-[0.10rem]"
+                      : "relative md:col-start-1 md:row-start-3 px-8 border-l-2 md:border-l-0 md:border-r-2 border-l-gray-custom md:border-r-gray-custom"
+                }`}
+              >
+                <div
+                  class={`${
+                    index === 1
+                      ? "absolute top-0 -left-[1.4rem] bg-dark border-2 border-white rounded-full p-1"
+                      : "absolute top-0 -left-[1.4rem] md:left-auto md:-right-[1.4rem] bg-dark border-2 border-white rounded-full p-1"
+                  }`}
+                >
+                  <img
+                    src={workIcon.src}
+                    alt="Work Icon"
+                    class="w-[30px] h-[30px]"
+                  />
+                </div>
+                <CardExperience {...experience} />
+              </div>
+            );
+          })
+        }
       </div>
     </section>
   </main>
