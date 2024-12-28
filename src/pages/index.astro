@@ -197,16 +197,20 @@ import CardProjects from "@components/CardProjects.astro";
         {projectsItems.map((projectTag) => <TagProjects title={projectTag} />)}
       </div>
       <div
-        class="flex flex-row gap-4 justify-start items-stretch w-full overflow-x-scroll snap-mandatory snap-x hidden-scroll"
+        class="flex flex-row justify-start items-stretch w-full overflow-x-scroll snap-mandatory snap-x hidden-scroll"
       >
         {
           projects.map((project) => (
             <CardProjects
               title={project.title}
               description={project.description}
+              company={project.company}
               image={project.image}
               alt={project.alt}
               tags={project.tags}
+              linkToLinkedInProject={project.linkToLinkedInProject}
+              linkToGitHubProject={project.linkToGitHubProject}
+              linkToTableauProject={project.linkToTableauProject}
             />
           ))
         }
