@@ -1,15 +1,21 @@
 ---
 interface Props {
-  image: string;
+  image: keyof typeof programmingLanguages;
   title: string;
   alt: string;
 }
 const { image, title, alt } = Astro.props as Props;
+import pythonIcon from "@svg/skPython.svg";
+import tableauIcon from "@svg/skTableau.svg";
+const programmingLanguages = {
+  python: pythonIcon.src,
+  tableau: tableauIcon.src,
+};
 ---
 
 <span
   class="flex flex-row gap-2 justify-center items-center p-2 border-gray-custom border-2 rounded-2xl"
 >
-  <img src={image} alt={alt} class="w-[35px] h-[35px]" />
+  <img src={programmingLanguages[image]} alt={alt} class="w-[20px] h-[20px]" />
   <p class="text-white text-sm sm:text-base">{title}</p>
 </span>

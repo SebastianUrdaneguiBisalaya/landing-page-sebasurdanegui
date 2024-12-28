@@ -18,12 +18,14 @@ import { servicesItems } from "@constants/servicesItem";
 import { contactItems } from "@constants/contactItems";
 import CardServices from "@components/CardServices.astro";
 import CardContact from "@components/CardContact.astro";
-import { projectsItems } from "@constants/projectsItems";
+import { projects, projectsItems } from "@constants/projectsItems";
 import TagProjects from "@components/TagProjects.astro";
+import CardProjects from "@components/CardProjects.astro";
 ---
 
 <Layout>
   <header
+    id="header"
     class="fixed top-0 left-0 w-full flex flex-col justify-center items-center pt-6 px-5 z-50"
   >
     <div
@@ -195,8 +197,19 @@ import TagProjects from "@components/TagProjects.astro";
         {projectsItems.map((projectTag) => <TagProjects title={projectTag} />)}
       </div>
       <div
-        class="flex flex-row gap-4 justify-start items-center w-full overflow-x-scroll snap-mandatory snap-x hidden-scroll"
+        class="flex flex-row gap-4 justify-start items-stretch w-full overflow-x-scroll snap-mandatory snap-x hidden-scroll"
       >
+        {
+          projects.map((project) => (
+            <CardProjects
+              title={project.title}
+              description={project.description}
+              image={project.image}
+              alt={project.alt}
+              tags={project.tags}
+            />
+          ))
+        }
       </div>
     </section>
     <section
@@ -240,6 +253,17 @@ import TagProjects from "@components/TagProjects.astro";
 </style>
 
 <script>
+  const header = document.querySelector("#header");
+  let lastScrollY = 0;
+  window.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
+    if (currentScrollY > 0 && currentScrollY > lastScrollY) {
+      header?.classList.add("backdrop-blur-[10px]");
+    } else if (currentScrollY === 0) {
+      header?.classList.remove("backdrop-blur-[10px]");
+    }
+    lastScrollY = currentScrollY;
+  });
   const menuHamburger = document.querySelector("#hamburger-icon");
   const mobileNavbar = document.querySelector("#mobile-navbar");
   menuHamburger?.addEventListener("click", () => {
