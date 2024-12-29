@@ -1,0 +1,25 @@
+---
+interface Props {
+  logo: string;
+  alt: string;
+  path: string;
+  description: string;
+}
+const { logo, alt, path, description } = Astro.props as Props;
+import linkedInColor from "@svg/linkedInColor.svg";
+import gmail from "@svg/gmail.svg";
+---
+
+<a
+  class="flex flex-col gap-2 justify-center items-center border-gray-custom border-2 rounded-2xl p-6 cursor-pointer hover:bg-white hover:text-black"
+  href={path}
+>
+  <div>
+    <img
+      src={`${logo === "linkedIn" ? linkedInColor.src : gmail.src}`}
+      alt={alt}
+    />
+  </div>
+  <p class="text-sm sm:text-base text-center">{path}</p>
+  <p class="text-sm sm:text-base text-center">{description}</p>
+</a>
