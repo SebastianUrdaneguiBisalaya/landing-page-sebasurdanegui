@@ -21,6 +21,8 @@ import CardServices from "@components/CardServices.astro";
 import CardContact from "@components/CardContact.astro";
 import Projects from "@components/Projects";
 import Awards from "@assets-img/awards.webp";
+import Profile from "@assets-img/profile.webp";
+import IconLandingPage from "@assets-img/icon-landing-page.webp";
 ---
 
 <Layout>
@@ -33,7 +35,7 @@ import Awards from "@assets-img/awards.webp";
     >
       <div class="hidden sm:block max-w-[250px] max-h-[30px]">
         <img
-          src="./icon-landing-page.png"
+          src={IconLandingPage.src}
           alt="Icon Landing Page"
           class="w-full h-full"
         />
@@ -116,7 +118,7 @@ import Awards from "@assets-img/awards.webp";
     >
       <div class="w-28 md:w-36 h-28 md:h-36">
         <img
-          src="./profile.png"
+          src={Profile.src}
           alt="Sebastian Urdanegui Image"
           class="w-full h-full"
         />
