@@ -26,7 +26,7 @@ import Awards from "@assets/awards.webp";
 <Layout>
   <header
     id="header"
-    class="fixed top-0 left-0 w-full flex flex-col justify-center items-center pt-6 px-5 z-50"
+    class="header-animated backdrop-blur-[10px] md:backdrop-blur-0 overflow-visible z-[9999] w-full flex flex-col justify-center items-center pt-6 px-5"
   >
     <div
       class="max-w-screen-xl w-full flex flex-row justify-between gap-4 items-center py-4"
@@ -237,7 +237,7 @@ import Awards from "@assets/awards.webp";
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div class="w-full h-full flex flex-col justify-center items-center">
-          <Image src={Awards} alt="Award 1" width={1000} height={800} />
+          <Image src={Awards} alt="Award 1" />
         </div>
         <div
           class="w-full h-full flex flex-col justify-start items-center gap-4"
@@ -297,23 +297,30 @@ import Awards from "@assets/awards.webp";
 </Layout>
 
 <style>
+  .header-animated {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    animation: fade-bg linear both;
+    animation-timeline: scroll();
+    animation-range: 0 150px;
+  }
+  @keyframes fade-bg {
+    0% {
+      background-color: rgba(0, 0, 0, 0);
+    }
+    100% {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  }
   section {
     scroll-margin-top: 100px;
   }
 </style>
 
 <script>
-  const header = document.querySelector("#header");
-  let lastScrollY = 0;
-  window.addEventListener("scroll", () => {
-    const currentScrollY = window.scrollY;
-    if (currentScrollY > 0 && currentScrollY > lastScrollY) {
-      header?.classList.add("backdrop-blur-[10px]");
-    } else if (currentScrollY === 0) {
-      header?.classList.remove("backdrop-blur-[10px]");
-    }
-    lastScrollY = currentScrollY;
-  });
   const menuHamburger = document.querySelector("#hamburger-icon");
   const mobileNavbar = document.querySelector("#mobile-navbar");
   menuHamburger?.addEventListener("click", () => {
