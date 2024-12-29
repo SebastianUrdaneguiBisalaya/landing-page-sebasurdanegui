@@ -1,4 +1,3 @@
-
 interface Props {
   title: string;
   company: string;
@@ -13,8 +12,8 @@ interface Props {
   linkToTableauProject: string;
 }
 import TagProgrammingLanguage from "@components/TagProgrammingLanguage";
-import linkedinIcon from "@svg/linkedin.svg";
-import githubIcon from "@svg/github.svg";
+import linkedinIcon from "@svg-icons/linkedin.svg";
+import githubIcon from "@svg-icons/github.svg";
 
 export default function CardProjects({title,
   description,
