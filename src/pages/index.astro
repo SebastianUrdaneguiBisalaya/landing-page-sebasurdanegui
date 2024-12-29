@@ -33,13 +33,16 @@ import IconLandingPage from "@assets-img/icon-landing-page.webp";
     <div
       class="max-w-screen-xl w-full flex flex-row justify-between gap-4 items-center py-4"
     >
-      <div class="hidden sm:block max-w-[250px] max-h-[30px]">
+      <a
+        class="hidden sm:block max-w-[250px] max-h-[30px]"
+        href="#hero-section"
+      >
         <img
           src={IconLandingPage.src}
           alt="Icon Landing Page"
           class="w-full h-full"
         />
-      </div>
+      </a>
       <nav
         class="flex flex-row gap-8 w-full sm:w-auto justify-between items-center"
       >
@@ -147,7 +150,7 @@ import IconLandingPage from "@assets-img/icon-landing-page.webp";
         Soy especialista en desarrollo web, aplicaciones móviles nativas, automatización
         de procesos, análisis de datos y modelos de ML.
       </p>
-      <Button title="Conóceme" />
+      <Button title="Conóceme" href="#experience-section" />
       <div id="social-media-links" class="md:absolute md:left-5 md:bottom-0">
         <div
           class="flex flex-row md:flex-col justify-center items-center gap-4"
@@ -155,11 +158,23 @@ import IconLandingPage from "@assets-img/icon-landing-page.webp";
           <SocialMediaTag
             svg={linkedinIcon.src}
             alt="Linkedin Profile"
-            href=""
+            href="https://www.linkedin.com/in/sebastianurdaneguibisalaya/"
           />
-          <SocialMediaTag svg={githubIcon.src} alt="Github Profile" href="" />
-          <SocialMediaTag svg={mediumIcon.src} alt="Medium Profile" href="" />
-          <SocialMediaTag svg={tableauIcon.src} alt="Tableau Profile" href="" />
+          <SocialMediaTag
+            svg={githubIcon.src}
+            alt="Github Profile"
+            href="https://github.com/SebastianUrdaneguiBisalaya"
+          />
+          <SocialMediaTag
+            svg={mediumIcon.src}
+            alt="Medium Profile"
+            href="https://medium.com/@sebasurdanegui"
+          />
+          <SocialMediaTag
+            svg={tableauIcon.src}
+            alt="Tableau Profile"
+            href="https://public.tableau.com/app/profile/sebastian.marat.urdanegui.bisalaya/vizzes"
+          />
         </div>
       </div>
     </section>
