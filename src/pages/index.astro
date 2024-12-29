@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "@layouts/Layout.astro";
 import lineSvg from "@svg/line.svg";
 import spanishIcon from "@svg/spanish.svg";
@@ -19,6 +20,7 @@ import { contactItems } from "@constants/contactItems";
 import CardServices from "@components/CardServices.astro";
 import CardContact from "@components/CardContact.astro";
 import Projects from "@components/Projects";
+import Awards from "@assets/awards.webp";
 ---
 
 <Layout>
@@ -224,6 +226,60 @@ import Projects from "@components/Projects";
       </p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         {servicesItems.map((service) => <CardServices {...service} />)}
+      </div>
+    </section>
+    <section
+      id="awards-section"
+      class="max-w-screen-xl px-5 w-full flex flex-col justify-center items-center gap-8 my-8"
+    >
+      <h2 class="text-2xl sm:text-3xl md:text-4xl text-left font-medium w-full">
+        Reconocimientos
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="w-full h-full flex flex-col justify-center items-center">
+          <Image src={Awards} alt="Award 1" width={1000} height={800} />
+        </div>
+        <div
+          class="w-full h-full flex flex-col justify-start items-center gap-4"
+        >
+          <p
+            class="text-left text-lg sm:text-xl font-bold leading-relaxed w-full"
+          >
+            4° Puesto | Datatón Exprésate Perú con Datos 2023
+          </p>
+          <p
+            class="text-left text-sm sm:text-base font-light leading-relaxed w-full"
+          >
+            Concurso organizado por la <span class="font-bold"
+              >Secretaría de Gobierno y Transformación Digital del Perú</span
+            >. El tópico de mi análisis fue la <span class="font-bold"
+              >valorización de los días de descanso por accidentes laborales a
+              nivel nacional</span
+            >. El dataset fue proporcionado por el Ministerio de Trabajo y
+            Promoción del Empleo.
+          </p>
+          <p
+            class="text-left text-sm sm:text-base font-bold leading-relaxed w-full"
+          >
+            Hallazgos:
+          </p>
+          <p
+            class="text-left text-sm sm:text-base font-light leading-relaxed w-full"
+          >
+            • Setiembre 2022 emerge como el mes con la mayor concentración de
+            accidentes laborales en casi un año. Un total de 3,500 incidentes
+            resaltan la necesidad de una mayor atención a la seguridad en el
+            trabajo.
+            <br />
+            • El género masculino enfrenta una mayor incidencia de accidentes laborales.
+            <br />
+            • El seguro de salud ESSALUD emerge como el preferido en ambos géneros,
+            resaltando su relevancia en momentos de crisis.
+            <br />
+            • Las caídas lideran el tipo de accidentes, mientras que el ambiente
+            de trabajo es el agente causante más común.
+          </p>
+        </div>
       </div>
     </section>
     <section
