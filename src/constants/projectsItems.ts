@@ -6,6 +6,7 @@ export const projectsItems = [
 ];
 
 interface PropsProjects {
+  id: string;
   category: string;
   title: string;
   description: string;
@@ -22,6 +23,7 @@ interface PropsProjects {
 
 export const projects: PropsProjects[] = [
   {
+    id: "1",
     category: "Análisis y Ciencia de Datos",
     title:
       "Comparativa del valor de mercado entre la selección argentina y peruana de fútbol",
@@ -46,6 +48,7 @@ export const projects: PropsProjects[] = [
     linkToTableauProject: "",
   },
   {
+    id: "2",
     category: "Análisis y Ciencia de Datos",
     title: "Emisiones de gases de efecto invernadero por sector en el Perú",
     description:
@@ -68,6 +71,7 @@ export const projects: PropsProjects[] = [
     linkToTableauProject: "",
   },
   {
+    id: "3",
     category: "Análisis y Ciencia de Datos",
     title: "Relación entre la tasa de desempleo y el % de microempresas 2021",
     description:
@@ -90,6 +94,7 @@ export const projects: PropsProjects[] = [
     linkToTableauProject: "",
   },
   {
+    id: "4",
     category: "Análisis y Ciencia de Datos",
     title: "Desembolsos del Programa Techo Propio 2022",
     description:
@@ -112,6 +117,7 @@ export const projects: PropsProjects[] = [
     linkToTableauProject: "",
   },
   {
+    id: "5",
     category: "Análisis y Ciencia de Datos",
     title: "Valorización de días de descanso por accidentes laborales",
     description:
@@ -136,6 +142,7 @@ export const projects: PropsProjects[] = [
       "https://public.tableau.com/app/profile/sebastian.marat.urdanegui.bisalaya/viz/ValorizacindeDasdeDescansodelosAccidentesdeTrabajo/Historia1",
   },
   {
+    id: "6",
     category: "Análisis y Ciencia de Datos",
     title: "Personas adultas mayores",
     description:
@@ -160,6 +167,7 @@ export const projects: PropsProjects[] = [
       "https://public.tableau.com/app/profile/sebastian.marat.urdanegui.bisalaya/viz/PersonasAdultasMayoresenelDistritodeLurn/Historia1",
   },
   {
+    id: "7",
     category: "Análisis y Ciencia de Datos",
     title: "Central de llamadas de emergencia",
     description:
@@ -186,6 +194,7 @@ export const projects: PropsProjects[] = [
       "https://public.tableau.com/app/profile/sebastian.marat.urdanegui.bisalaya/viz/CentraldeLlamadasdeEmergenciadelaMunicipalidaddeVentanillaPer/Historia",
   },
   {
+    id: "8",
     category: "Análisis y Ciencia de Datos",
     title: "Colocaciones de créditos",
     description:
@@ -209,6 +218,7 @@ export const projects: PropsProjects[] = [
     linkToTableauProject: "",
   },
   {
+    id: "9",
     category: "Automatización",
     title: "Segmentación RFM",
     description:
@@ -230,6 +240,7 @@ export const projects: PropsProjects[] = [
       "https://github.com/SebastianUrdaneguiBisalaya/Segmentacion-RFM?tab=readme-ov-file",
   },
   {
+    id: "10",
     category: "Automatización",
     title: "Amigo secreto",
     description:
@@ -249,6 +260,7 @@ export const projects: PropsProjects[] = [
     linkToTableauProject: "",
   },
   {
+    id: "11",
     category: "Automatización",
     title: "pyportfolioanalytics",
     description:
@@ -270,6 +282,7 @@ export const projects: PropsProjects[] = [
       "https://github.com/SebastianUrdaneguiBisalaya/py-portfolioanalytics/blob/master/README.md",
   },
   {
+    id: "12",
     category: "Automatización",
     title: "pyFinancialAnalysis",
     description:
@@ -294,6 +307,7 @@ export const projects: PropsProjects[] = [
       "https://medium.com/@sebasurdanegui/c%C3%B3mo-realizar-un-an%C3%A1lisis-financiero-en-python-e7405a5f95d",
   },
   {
+    id: "13",
     category: "Desarrollo web",
     title: "Presentación de solución digital para la gestión escolar",
     description:
@@ -318,6 +332,7 @@ export const projects: PropsProjects[] = [
     linkToTableauProject: "https://dabifly.vercel.app/",
   },
   {
+    id: "14",
     category: "Desarrollo web",
     title: "Aplicación web para encontrar eventos en la ciudad",
     description:
@@ -346,6 +361,7 @@ export const projects: PropsProjects[] = [
     linkToTableauProject: "https://apptofindevents.vercel.app",
   },
   {
+    id: "15",
     category: "Desarrollo web",
     title: "Backend para encontrar eventos en la ciudad",
     description:
@@ -378,6 +394,7 @@ export const projects: PropsProjects[] = [
       "https://github.com/SebastianUrdaneguiBisalaya/App-To-Find-Events-Backend",
   },
   {
+    id: "16",
     category: "Desarrollo web",
     title: "Landing page para gimnasios",
     description: "",
@@ -405,6 +422,7 @@ export const projects: PropsProjects[] = [
     linkToTableauProject: "https://gotothegym24.vercel.app",
   },
   {
+    id: "17",
     category: "Desarrollo web",
     title: "Plataforma de streaming de películas y series",
     description: "",
@@ -435,6 +453,7 @@ export const projects: PropsProjects[] = [
     linkToTableauProject: "https://movie-streaming-platform-rho.vercel.app/",
   },
   {
+    id: "18",
     category: "Desarrollo web",
     title: "ToDo List App",
     description: "",
@@ -462,6 +481,7 @@ export const projects: PropsProjects[] = [
     linkToTableauProject: "https://mytaski.vercel.app/",
   },
   {
+    id: "19",
     category: "Desarrollo web",
     title: "App de seguimiento de gastos",
     description: "",
@@ -489,6 +509,7 @@ export const projects: PropsProjects[] = [
     linkToTableauProject: "https://tracking-expenses-app.vercel.app/",
   },
   {
+    id: "20",
     category: "Desarrollo móvil",
     title: "App de asistencias escolares",
     description: "",
@@ -515,6 +536,7 @@ export const projects: PropsProjects[] = [
     linkToTableauProject: "",
   },
   {
+    id: "21",
     category: "Desarrollo móvil",
     title: "App de registro de entradas y salidas de productos",
     description: "",

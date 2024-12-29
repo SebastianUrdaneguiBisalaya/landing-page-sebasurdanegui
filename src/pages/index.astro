@@ -18,9 +18,7 @@ import { servicesItems } from "@constants/servicesItem";
 import { contactItems } from "@constants/contactItems";
 import CardServices from "@components/CardServices.astro";
 import CardContact from "@components/CardContact.astro";
-import { projects, projectsItems } from "@constants/projectsItems";
-import TagProjects from "@components/TagProjects.astro";
-import CardProjects from "@components/CardProjects.astro";
+import Projects from "@components/Projects";
 ---
 
 <Layout>
@@ -191,30 +189,7 @@ import CardProjects from "@components/CardProjects.astro";
       <h2 class="text-2xl sm:text-3xl md:text-4xl text-left font-medium w-full">
         Mis Proyectos
       </h2>
-      <div
-        class="flex flex-row gap-4 justify-start items-center w-full overflow-x-scroll snap-proximity snap-x hidden-scroll"
-      >
-        {projectsItems.map((projectTag) => <TagProjects title={projectTag} />)}
-      </div>
-      <div
-        class="flex flex-row justify-start items-stretch w-full overflow-x-scroll snap-mandatory snap-x hidden-scroll"
-      >
-        {
-          projects.map((project) => (
-            <CardProjects
-              title={project.title}
-              description={project.description}
-              company={project.company}
-              image={project.image}
-              alt={project.alt}
-              tags={project.tags}
-              linkToLinkedInProject={project.linkToLinkedInProject}
-              linkToGitHubProject={project.linkToGitHubProject}
-              linkToTableauProject={project.linkToTableauProject}
-            />
-          ))
-        }
-      </div>
+      <Projects client:load />
     </section>
     <section
       id="services-section"
@@ -246,15 +221,6 @@ import CardProjects from "@components/CardProjects.astro";
     </section>
   </main>
 </Layout>
-
-<style>
-  .hidden-scroll {
-    scrollbar-width: none;
-  }
-  .hidden-scroll::-webkit-scrollbar {
-    display: none;
-  }
-</style>
 
 <script>
   const header = document.querySelector("#header");
