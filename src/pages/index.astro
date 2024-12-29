@@ -61,20 +61,38 @@ import Projects from "@components/Projects";
       </nav>
     </div>
     <div id="mobile-navbar" class="absolute top-full w-full h-full z-50 hidden">
-      <ul
-        class="flex flex-col bg-dark justify-center items-center gap-4 w-full"
-      >
-        <li class="py-2 cursor-pointer hover:font-bold w-full text-center">
-          Experiencia
+      <ul class="flex flex-col bg-black justify-center items-center w-full">
+        <li
+          id="tag-go-to-section"
+          class="cursor-pointer w-full h-full text-left rounded-lg py-2 px-4 hover:bg-primary hover:text-white hover:font-bold"
+        >
+          <a href="#experience-section" class="flex flex-row w-full h-full"
+            >Experiencia</a
+          >
         </li>
-        <li class="py-2 cursor-pointer hover:font-bold w-full text-center">
-          Proyectos
+        <li
+          id="tag-go-to-section"
+          class="cursor-pointer w-full text-left rounded-lg py-2 px-4 hover:bg-primary hover:text-white hover:font-bold"
+        >
+          <a href="#projects-section" class="flex flex-row w-full h-full"
+            >Proyectos</a
+          >
         </li>
-        <li class="py-2 cursor-pointer hover:font-bold w-full text-center">
-          Servicios
+        <li
+          id="tag-go-to-section"
+          class="cursor-pointer w-full text-left rounded-lg py-2 px-4 hover:bg-primary hover:text-white hover:font-bold"
+        >
+          <a href="#services-section" class="flex flex-row w-full h-full"
+            >Servicios</a
+          >
         </li>
-        <li class="py-2 cursor-pointer hover:font-bold w-full text-center">
-          Contacto
+        <li
+          id="tag-go-to-section"
+          class="cursor-pointer w-full text-left rounded-lg py-2 px-4 hover:bg-primary hover:text-white hover:font-bold"
+        >
+          <a href="#contact-section" class="flex flex-row w-full h-full"
+            >Contacto</a
+          >
         </li>
       </ul>
     </div>
@@ -222,6 +240,12 @@ import Projects from "@components/Projects";
   </main>
 </Layout>
 
+<style>
+  section {
+    scroll-margin-top: 100px;
+  }
+</style>
+
 <script>
   const header = document.querySelector("#header");
   let lastScrollY = 0;
@@ -238,5 +262,11 @@ import Projects from "@components/Projects";
   const mobileNavbar = document.querySelector("#mobile-navbar");
   menuHamburger?.addEventListener("click", () => {
     mobileNavbar?.classList.toggle("hidden");
+  });
+  const tagsGoToSection = document.querySelectorAll("#tag-go-to-section");
+  tagsGoToSection.forEach((tag) => {
+    tag.addEventListener("click", () => {
+      mobileNavbar?.classList.toggle("hidden");
+    });
   });
 </script>
