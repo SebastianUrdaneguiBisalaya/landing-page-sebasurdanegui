@@ -1,14 +1,15 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "@layouts/Layout.astro";
-import lineSvg from "@svg/line.svg";
-import spanishIcon from "@svg/spanish.svg";
-import englishIcon from "@svg/english.svg";
-import linkedinIcon from "@svg/linkedin.svg";
-import githubIcon from "@svg/github.svg";
-import mediumIcon from "@svg/medium.svg";
-import tableauIcon from "@svg/tableau.svg";
-import workIcon from "@svg/work.svg";
-import hamburger from "@svg/hamburger.svg";
+import lineSvg from "@svg-icons/line.svg";
+import spanishIcon from "@svg-icons/spanish.svg";
+import englishIcon from "@svg-icons/english.svg";
+import linkedinIcon from "@svg-icons/linkedin.svg";
+import githubIcon from "@svg-icons/github.svg";
+import mediumIcon from "@svg-icons/medium.svg";
+import tableauIcon from "@svg-icons/tableau.svg";
+import workIcon from "@svg-icons/work.svg";
+import hamburger from "@svg-icons/hamburger.svg";
 import Button from "@components/Button.astro";
 import CardExperience from "@components/CardExperience.astro";
 import SocialMediaTag from "@components/SocialMediaTag.astro";
@@ -19,33 +20,47 @@ import { contactItems } from "@constants/contactItems";
 import CardServices from "@components/CardServices.astro";
 import CardContact from "@components/CardContact.astro";
 import Projects from "@components/Projects";
+import Awards from "@assets-img/awards.webp";
+import Profile from "@assets-img/profile.webp";
+import IconLandingPage from "@assets-img/icon-landing-page.webp";
 ---
 
 <Layout>
   <header
     id="header"
-    class="fixed top-0 left-0 w-full flex flex-col justify-center items-center pt-6 px-5 z-50"
+    class="header-animated backdrop-blur-[10px] md:backdrop-blur-0 overflow-visible z-[9999] w-full flex flex-col justify-center items-center pt-6 px-5"
   >
     <div
       class="max-w-screen-xl w-full flex flex-row justify-between gap-4 items-center py-4"
     >
-      <div class="hidden sm:block max-w-[250px] max-h-[30px]">
+      <a
+        class="hidden sm:block max-w-[250px] max-h-[30px]"
+        href="#hero-section"
+      >
         <img
-          src="./icon-landing-page.png"
+          src={IconLandingPage.src}
           alt="Icon Landing Page"
           class="w-full h-full"
         />
-      </div>
+      </a>
       <nav
         class="flex flex-row gap-8 w-full sm:w-auto justify-between items-center"
       >
         <ul
           class="hidden md:flex md:flex-row md:justify-between md:items-center md:gap-4"
         >
-          <li class="cursor-pointer hover:font-bold">Experiencia</li>
-          <li class="cursor-pointer hover:font-bold">Proyectos</li>
-          <li class="cursor-pointer hover:font-bold">Servicios</li>
-          <li class="cursor-pointer hover:font-bold">Contacto</li>
+          <li class="cursor-pointer hover:font-bold">
+            <a href="#experience-section" class="w-full h-full">Experiencia</a>
+          </li>
+          <li class="cursor-pointer hover:font-bold">
+            <a href="#projects-section" class="w-full h-full">Proyectos</a>
+          </li>
+          <li class="cursor-pointer hover:font-bold">
+            <a href="#services-section" class="w-full h-full">Servicios</a>
+          </li>
+          <li class="cursor-pointer hover:font-bold">
+            <a href="#contact-section" class="w-full h-full">Contacto</a>
+          </li>
         </ul>
         <ul class="flex flex-row justify-between items-center gap-4">
           <li class="cursor-pointer min-w-[15px] max-w-[25px]">
@@ -61,20 +76,38 @@ import Projects from "@components/Projects";
       </nav>
     </div>
     <div id="mobile-navbar" class="absolute top-full w-full h-full z-50 hidden">
-      <ul
-        class="flex flex-col bg-dark justify-center items-center gap-4 w-full"
-      >
-        <li class="py-2 cursor-pointer hover:font-bold w-full text-center">
-          Experiencia
+      <ul class="flex flex-col bg-black justify-center items-center w-full">
+        <li
+          id="tag-go-to-section"
+          class="cursor-pointer w-full h-full text-left rounded-lg py-2 px-4 hover:bg-primary hover:text-white hover:font-bold"
+        >
+          <a href="#experience-section" class="flex flex-row w-full h-full"
+            >Experiencia</a
+          >
         </li>
-        <li class="py-2 cursor-pointer hover:font-bold w-full text-center">
-          Proyectos
+        <li
+          id="tag-go-to-section"
+          class="cursor-pointer w-full text-left rounded-lg py-2 px-4 hover:bg-primary hover:text-white hover:font-bold"
+        >
+          <a href="#projects-section" class="flex flex-row w-full h-full"
+            >Proyectos</a
+          >
         </li>
-        <li class="py-2 cursor-pointer hover:font-bold w-full text-center">
-          Servicios
+        <li
+          id="tag-go-to-section"
+          class="cursor-pointer w-full text-left rounded-lg py-2 px-4 hover:bg-primary hover:text-white hover:font-bold"
+        >
+          <a href="#services-section" class="flex flex-row w-full h-full"
+            >Servicios</a
+          >
         </li>
-        <li class="py-2 cursor-pointer hover:font-bold w-full text-center">
-          Contacto
+        <li
+          id="tag-go-to-section"
+          class="cursor-pointer w-full text-left rounded-lg py-2 px-4 hover:bg-primary hover:text-white hover:font-bold"
+        >
+          <a href="#contact-section" class="flex flex-row w-full h-full"
+            >Contacto</a
+          >
         </li>
       </ul>
     </div>
@@ -88,7 +121,7 @@ import Projects from "@components/Projects";
     >
       <div class="w-28 md:w-36 h-28 md:h-36">
         <img
-          src="./profile.png"
+          src={Profile.src}
           alt="Sebastian Urdanegui Image"
           class="w-full h-full"
         />
@@ -117,7 +150,7 @@ import Projects from "@components/Projects";
         Soy especialista en desarrollo web, aplicaciones móviles nativas, automatización
         de procesos, análisis de datos y modelos de ML.
       </p>
-      <Button title="Conóceme" />
+      <Button title="Conóceme" href="#experience-section" />
       <div id="social-media-links" class="md:absolute md:left-5 md:bottom-0">
         <div
           class="flex flex-row md:flex-col justify-center items-center gap-4"
@@ -125,11 +158,23 @@ import Projects from "@components/Projects";
           <SocialMediaTag
             svg={linkedinIcon.src}
             alt="Linkedin Profile"
-            href=""
+            href="https://www.linkedin.com/in/sebastianurdaneguibisalaya/"
           />
-          <SocialMediaTag svg={githubIcon.src} alt="Github Profile" href="" />
-          <SocialMediaTag svg={mediumIcon.src} alt="Medium Profile" href="" />
-          <SocialMediaTag svg={tableauIcon.src} alt="Tableau Profile" href="" />
+          <SocialMediaTag
+            svg={githubIcon.src}
+            alt="Github Profile"
+            href="https://github.com/SebastianUrdaneguiBisalaya"
+          />
+          <SocialMediaTag
+            svg={mediumIcon.src}
+            alt="Medium Profile"
+            href="https://medium.com/@sebasurdanegui"
+          />
+          <SocialMediaTag
+            svg={tableauIcon.src}
+            alt="Tableau Profile"
+            href="https://public.tableau.com/app/profile/sebastian.marat.urdanegui.bisalaya/vizzes"
+          />
         </div>
       </div>
     </section>
@@ -209,6 +254,60 @@ import Projects from "@components/Projects";
       </div>
     </section>
     <section
+      id="awards-section"
+      class="max-w-screen-xl px-5 w-full flex flex-col justify-center items-center gap-8 my-8"
+    >
+      <h2 class="text-2xl sm:text-3xl md:text-4xl text-left font-medium w-full">
+        Reconocimientos
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="w-full h-full flex flex-col justify-center items-center">
+          <Image src={Awards} alt="Award 1" />
+        </div>
+        <div
+          class="w-full h-full flex flex-col justify-start items-center gap-4"
+        >
+          <p
+            class="text-left text-lg sm:text-xl font-bold leading-relaxed w-full"
+          >
+            4° Puesto | Datatón Exprésate Perú con Datos 2023
+          </p>
+          <p
+            class="text-left text-sm sm:text-base font-light leading-relaxed w-full"
+          >
+            Concurso organizado por la <span class="font-bold"
+              >Secretaría de Gobierno y Transformación Digital del Perú</span
+            >. El tópico de mi análisis fue la <span class="font-bold"
+              >valorización de los días de descanso por accidentes laborales a
+              nivel nacional</span
+            >. El dataset fue proporcionado por el Ministerio de Trabajo y
+            Promoción del Empleo.
+          </p>
+          <p
+            class="text-left text-sm sm:text-base font-bold leading-relaxed w-full"
+          >
+            Hallazgos:
+          </p>
+          <p
+            class="text-left text-sm sm:text-base font-light leading-relaxed w-full"
+          >
+            • Setiembre 2022 emerge como el mes con la mayor concentración de
+            accidentes laborales en casi un año. Un total de 3,500 incidentes
+            resaltan la necesidad de una mayor atención a la seguridad en el
+            trabajo.
+            <br />
+            • El género masculino enfrenta una mayor incidencia de accidentes laborales.
+            <br />
+            • El seguro de salud ESSALUD emerge como el preferido en ambos géneros,
+            resaltando su relevancia en momentos de crisis.
+            <br />
+            • Las caídas lideran el tipo de accidentes, mientras que el ambiente
+            de trabajo es el agente causante más común.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section
       id="contact-section"
       class="max-w-screen-xl px-5 w-full flex flex-col justify-center items-center gap-8 my-8"
     >
@@ -222,21 +321,40 @@ import Projects from "@components/Projects";
   </main>
 </Layout>
 
-<script>
-  const header = document.querySelector("#header");
-  let lastScrollY = 0;
-  window.addEventListener("scroll", () => {
-    const currentScrollY = window.scrollY;
-    if (currentScrollY > 0 && currentScrollY > lastScrollY) {
-      header?.classList.add("backdrop-blur-[10px]");
-    } else if (currentScrollY === 0) {
-      header?.classList.remove("backdrop-blur-[10px]");
+<style>
+  .header-animated {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    animation: fade-bg linear both;
+    animation-timeline: scroll();
+    animation-range: 0 150px;
+  }
+  @keyframes fade-bg {
+    0% {
+      background-color: rgba(0, 0, 0, 0);
     }
-    lastScrollY = currentScrollY;
-  });
+    100% {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  }
+  section {
+    scroll-margin-top: 100px;
+  }
+</style>
+
+<script>
   const menuHamburger = document.querySelector("#hamburger-icon");
   const mobileNavbar = document.querySelector("#mobile-navbar");
   menuHamburger?.addEventListener("click", () => {
     mobileNavbar?.classList.toggle("hidden");
+  });
+  const tagsGoToSection = document.querySelectorAll("#tag-go-to-section");
+  tagsGoToSection.forEach((tag) => {
+    tag.addEventListener("click", () => {
+      mobileNavbar?.classList.toggle("hidden");
+    });
   });
 </script>

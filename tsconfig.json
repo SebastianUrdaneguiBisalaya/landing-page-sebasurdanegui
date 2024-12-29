@@ -10,8 +10,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@svg/*": [
-        "src/assets/*"
+      "@svg-icons/*": [
+        "src/assets/icons/*"
       ],
       "@components/*": [
         "src/components/*"
@@ -21,6 +21,9 @@
       ],
       "@layouts/*": [
         "src/layouts/*"
+      ],
+      "@assets-img/*": [
+        "src/assets/images/*"
       ]
     },
     "jsx": "react-jsx",

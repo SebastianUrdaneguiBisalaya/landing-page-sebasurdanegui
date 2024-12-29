@@ -20,6 +20,27 @@ interface PropsProjects {
   linkToGitHubProject: string;
   linkToTableauProject: string;
 }
+import image1 from "@assets-img/valor_mercado_futbol.webp";
+import image2 from "@assets-img/gei.webp";
+import image3 from "@assets-img/desempleo_microempresas.webp";
+import image4 from "@assets-img/desembolsos_techo_propio.webp";
+import image5 from "@assets-img/valorizacion_laboral.webp";
+import image6 from "@assets-img/personas_adultas_mayores.webp";
+import image7 from "@assets-img/central_llamadas_de_emergencia.webp";
+import image8 from "@assets-img/colocaciones_credito.webp";
+import image9 from "@assets-img/rfm-model.webp";
+import image10 from "@assets-img/amigo_secreto.webp";
+import image11 from "@assets-img/pyportfolioanalytics.webp";
+import image12 from "@assets-img/pyfinancialanalysis.webp";
+import image13 from "@assets-img/dabifly_landing_page.webp";
+import image14 from "@assets-img/app_to_find_events_frontend.webp";
+import image15 from "@assets-img/app_to_find_events_backend.webp";
+import image16 from "@assets-img/gym24.webp";
+import image17 from "@assets-img/movie-platform.webp";
+import image18 from "@assets-img/home_tasks.webp";
+import image19 from "@assets-img/app-expenses-tracker.webp";
+import image20 from "@assets-img/app_asistencias.webp";
+import image21 from "@assets-img/app_analytics.webp";
 
 export const projects: PropsProjects[] = [
   {
@@ -30,8 +51,7 @@ export const projects: PropsProjects[] = [
     description:
       "¿Sabías que el XI inicial de la selección argentina en la Fecha 2 de la Copa América 2024 vale 29 veces más que el XI inicial de Perú? ⚽💰 Te adelanto algunos datos interesantes: el XI inicial argentino tiene un valor de mercado de €504 millones 💸, mientras que el de Perú es de €17.5 millones.",
     company: "Selección Peruana de Fútbol",
-    image:
-      "https://media.licdn.com/dms/image/v2/D4E22AQEq956ES8HK3A/feedshare-shrink_800/feedshare-shrink_800/0/1719600244394?e=1738195200&v=beta&t=FuOQiKo0jprq49-M0PCG4Z0jzu2sGc_I7ovlBsfaPno",
+    image: image1.src,
     alt: "Stat image of Market Value between the Argentine and Peruvian soccer teams.",
     tags: [
       {
@@ -54,8 +74,7 @@ export const projects: PropsProjects[] = [
     description:
       "La agricultura, silvicultura y otros usos de la tierra han multiplicado por cuatro sus emisiones de Gases de Efecto Invernadero (GEI) en el siglo XXI. Le sigue el sector de procesos industriales y usos de productos, con un aumento del 167% en el mismo periodo.",
     company: "Ministerio del Ambiente | Perú",
-    image:
-      "https://media.licdn.com/dms/image/v2/D4E22AQHqfA6BYFlT1Q/feedshare-shrink_800/feedshare-shrink_800/0/1717717452676?e=1738195200&v=beta&t=AAJAGyfXHPGMfiZxA4Nki0IFAyDNqXpYE1Eq-yuE8iU",
+    image: image2.src,
     alt: "Stat image of Greenhouse Gass Emissions by Sector in Peru.",
     tags: [
       {
@@ -77,8 +96,7 @@ export const projects: PropsProjects[] = [
     description:
       "El análisis efectuado tiene como resultado que cuanto mayor sea la proporción de microempresas en el sector con respecto al universo empresarial menor será la tasa de desempleo. Dato Importante: 📊 En conjunto, las MIPYME representan el 99.5% de todas las empresas en América Latina y contribuyen al 25% del PBI (Banco Mundial).",
     company: "Produce - Base Tejido Empresarial Provincial | Perú",
-    image:
-      "https://media.licdn.com/dms/image/v2/D4E22AQH-M-ZniPU9WQ/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1681619195458?e=1738195200&v=beta&t=q2zbYa9rSTtFJPwmsbNXP57LQSkhhqEkCrcwssxVoP0",
+    image: image3.src,
     alt: "Stat image of Inverse Relationship between Unemployment Rate and Microenterprises in Peru.",
     tags: [
       {
@@ -100,8 +118,7 @@ export const projects: PropsProjects[] = [
     description:
       "¿Te has preguntado cuántos sueños de vivienda se hicieron realidad en el año 2022? 📊 Durante el año 2022, se han otorgado alrededor de S/. 1,273 millones en Bonos Familiares Habitacionales (BFH) derivados del Programa Techo Propio del Fondo Mi Vivienda. ¡38,000 bonos emitidos!",
     company: "Programa Techo Propio del Fondo Mi Vivienda | Perú",
-    image:
-      "https://media.licdn.com/dms/image/v2/D4E22AQEqa98RLNKVjQ/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1698378175676?e=1738195200&v=beta&t=v_7Dv4S2Bj_QGJjT0z8RMIII4NWhdtAjrBZjCr2Pp28",
+    image: image4.src,
     alt: "Stat image of Program Disbursement Techo Propio in Peru.",
     tags: [
       {
@@ -123,8 +140,7 @@ export const projects: PropsProjects[] = [
     description:
       "Estimo que el monto perdido destinado al descanso del colaborador por accidente laboral asciende la cifra de S/ 3.2MM en el periodo Jun22 - Abr23. El tipo de accidente más frecuente es la caída de personas (16% del total) y el agente causante es el ambiente de trabajo (18% del total). El turno de trabajo con más accidentes laborales es el periodo diurno.",
     company: "Ministerio de Trabajo y Promoción del Empleo | Perú",
-    image:
-      "https://res.cloudinary.com/drzumfcdp/image/upload/v1714165571/Landing%20Page%20Sebastian/accidentesLaborales_bnhat6.jpg",
+    image: image5.src,
     alt: "Stat image of work accidents in Peru",
     tags: [
       {
@@ -148,8 +164,7 @@ export const projects: PropsProjects[] = [
     description:
       "Descubrí que las personas mayores en el distrito de Lurín en su mayoría son del género femenino, son casados, tienen entre 3 y 6 hijos, cuentan con SIS, no tienen trabajo y el 16% de las",
     company: "Municipalidad Distrital de Lurín | Perú",
-    image:
-      "https://res.cloudinary.com/drzumfcdp/image/upload/v1714256501/Landing%20Page%20Sebastian/adultos_mayores-min_lfdeag.png",
+    image: image6.src,
     alt: "Stat image of older adults in Lurin, Peru",
     tags: [
       {
@@ -173,8 +188,7 @@ export const projects: PropsProjects[] = [
     description:
       "La tasa de delitos de la Municipalidad de Ventanilla en el primer semestre de 2022 es del 0.48%. Encontré un total de 56,874 casos reportados a la central y 5,842 personas",
     company: "Municipalidad de Ventanilla | Perú",
-    image:
-      "https://res.cloudinary.com/drzumfcdp/image/upload/v1714256578/Landing%20Page%20Sebastian/fondo_mivivienda-min_mfgkxl.png",
+    image: image7.src,
     alt: "Stat image of emergency call center",
     tags: [
       {
@@ -200,8 +214,7 @@ export const projects: PropsProjects[] = [
     description:
       "¿Sabías que, en el caso del Nuevo Crédito Mivivienda entre 2018 y 2022, la cuota inicial promedio en el departamento de Huánuco es 4 veces mayor que la cuota inicial promedio en Madre de Dios?",
     company: "Fondo Mivivienda | Perú",
-    image:
-      "https://res.cloudinary.com/drzumfcdp/image/upload/v1714256581/Landing%20Page%20Sebastian/central_llamadas-min_b5bfvt.png",
+    image: image8.src,
     alt: "Stat image of placement credits",
     tags: [
       {
@@ -224,8 +237,7 @@ export const projects: PropsProjects[] = [
     description:
       "Librería en Python para entender el comportamiento de los clientes, indentificar los segmentos clave y diseñar estrategias de marketing.",
     company: "Marketing Analytics",
-    image:
-      "https://hivemarketingcloud.com/media/zphnp5zi/rfm-analysis-blog-graphic-01.png",
+    image: image9.src,
     alt: "Stat image of Secret Friend to Christmas gift automated system.",
     tags: [
       {
@@ -246,8 +258,7 @@ export const projects: PropsProjects[] = [
     description:
       "Sistema automatizado para la asignación aleatoria del amigo secreto navideño mediante el envío de correos personalizados en Python.",
     company: "Época Navideña",
-    image:
-      "https://media.licdn.com/dms/image/v2/D4E22AQGC01rXJWAsLQ/feedshare-shrink_800/feedshare-shrink_800/0/1700192488175?e=1738195200&v=beta&t=Ox30pKSPqf-sZ4u1JG84cmiKXfDTG_tR3k5EKicXljI",
+    image: image10.src,
     alt: "Stat image of Secret Friend to Christmas gift automated system.",
     tags: [
       {
@@ -266,8 +277,7 @@ export const projects: PropsProjects[] = [
     description:
       "Agiliza el análisis financiero, ofreciendo reportes y gráficos sobre precio, rendimiento, volatilidad y distribución.",
     company: "Finanzas",
-    image:
-      "https://media.licdn.com/dms/image/v2/D4E22AQHGzP1ZLnJ0FA/feedshare-shrink_800/feedshare-shrink_800/0/1684382335985?e=1738195200&v=beta&t=mVQx0cgXzu6Q6syJimyultafkz2akPeKLUXM4WNDn6M",
+    image: image11.src,
     alt: "Stat image of pyportfolioanalytics library in Python.",
     tags: [
       {
@@ -288,8 +298,7 @@ export const projects: PropsProjects[] = [
     description:
       "Librería de Python para análisis financiero: gráficos, tableros estadísticos para decisiones informadas.",
     company: "Finanzas",
-    image:
-      "https://media.licdn.com/dms/image/v2/C4E22AQE2-8-OYDcO2Q/feedshare-shrink_800/feedshare-shrink_800/0/1672763919743?e=1738195200&v=beta&t=TS79fskGvcaeHKq9N4Eq2yqpJ1D6Y-EVoB8m7YqmEx4",
+    image: image12.src,
     alt: "Image to show the pyFinancialAnalysis library in Python.",
     tags: [
       {
@@ -313,8 +322,7 @@ export const projects: PropsProjects[] = [
     description:
       "Revoluciona la gestión escolar con una solución digital que simplifica y moderniza tus procesos. Nuestra solución digital ha sido diseñada para transformar la manera en que las escuelas se organizan y se comunican entre padres de familia, alumnos y docentes.",
     company: "Dabifly",
-    image:
-      "https://res.cloudinary.com/drzumfcdp/image/upload/v1735425956/DabiflyProfileUsers/dabifly-lp_qsxdwv.png",
+    image: image13.src,
     alt: "Image of Dabifly Landing Page.",
     tags: [
       {
@@ -338,8 +346,7 @@ export const projects: PropsProjects[] = [
     description:
       "Muchas personas en todo el mundo sufren la falta de acceso a información sobre los acontecimientos que suceden en su zona. Este es un problema que queremos solucionar con nuestra idea.",
     company: "Entretenimiento",
-    image:
-      "https://github.com/SebastianUrdaneguiBisalaya/App-To-Find-Events/raw/main/img/trendingevents.png",
+    image: image14.src,
     alt: "Image of Find Events app.",
     tags: [
       {
@@ -367,8 +374,7 @@ export const projects: PropsProjects[] = [
     description:
       "Muchas personas en todo el mundo sufren la falta de acceso a información sobre los acontecimientos que suceden en su zona. Este es un problema que queremos solucionar con nuestra idea.",
     company: "Entretenimiento",
-    image:
-      "https://github.com/SebastianUrdaneguiBisalaya/App-To-Find-Events-Backend/raw/main/img/entity-relation-model-db.png",
+    image: image15.src,
     alt: "Image of Backend Code for Find Events app.",
     tags: [
       {
@@ -399,8 +405,7 @@ export const projects: PropsProjects[] = [
     title: "Landing page para gimnasios",
     description: "",
     company: "Gym24",
-    image:
-      "https://res.cloudinary.com/drzumfcdp/image/upload/v1735424384/gym24/gym24_ssvxle.png",
+    image: image16.src,
     alt: "Image of Frontend Code for Gym24 landing page.",
     tags: [
       {
@@ -427,8 +432,7 @@ export const projects: PropsProjects[] = [
     title: "Plataforma de streaming de películas y series",
     description: "",
     company: "Entretenimiento",
-    image:
-      "https://res.cloudinary.com/drzumfcdp/image/upload/v1735424306/Landing%20Page%20Sebastian/movie-platform_tcvymp.png",
+    image: image17.src,
     alt: "Image of Movie Plataform Application.",
     tags: [
       {
@@ -458,8 +462,7 @@ export const projects: PropsProjects[] = [
     title: "ToDo List App",
     description: "",
     company: "Organización y planificación",
-    image:
-      "https://github.com/SebastianUrdaneguiBisalaya/1-project-task-manager-app-scrum/raw/main/assets/img/home%20tasks.png",
+    image: image18.src,
     alt: "Image of ToDo List Application.",
     tags: [
       {
@@ -486,8 +489,7 @@ export const projects: PropsProjects[] = [
     title: "App de seguimiento de gastos",
     description: "",
     company: "Finanzas personales",
-    image:
-      "https://github.com/SebastianUrdaneguiBisalaya/4-project-app-tracking-expenses-sprint-2/raw/main/assets/Expenses%20Tracking%20App.png",
+    image: image19.src,
     alt: "Image of Expense Tracker Application.",
     tags: [
       {
@@ -514,8 +516,7 @@ export const projects: PropsProjects[] = [
     title: "App de asistencias escolares",
     description: "",
     company: "Educación y Tecnología",
-    image:
-      "https://res.cloudinary.com/drzumfcdp/image/upload/v1733813205/DabiflyProfileUsers/dabifly_docentes_landing_page_bity6y.png",
+    image: image20.src,
     alt: "Image of Attendances Management School Application.",
     tags: [
       {
@@ -541,8 +542,7 @@ export const projects: PropsProjects[] = [
     title: "App de registro de entradas y salidas de productos",
     description: "",
     company: "Sector Productivo",
-    image:
-      "https://res.cloudinary.com/drzumfcdp/image/upload/v1735426736/Landing%20Page%20Sebastian/app-analytics_vuxhdw.png",
+    image: image21.src,
     alt: "Image of inputs and outputs of products.",
     tags: [
       {
