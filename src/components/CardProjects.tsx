@@ -26,17 +26,22 @@ export default function CardProjects({title,
   linkToTableauProject}: Props) {
   return (
   <div
-  className="max-w-80 h-full flex flex-col justify-center items-center gap-4 p-6"
+  className="max-w-72 h-full flex flex-col justify-center items-center gap-4 p-6 snap-center"
 >
   <a
-    className="flex justify-center items-center w-64 h-56 rounded-2xl cursor-pointer"
-    href={linkToTableauProject}
-    target="_blank"
+    className={`flex justify-center items-center w-64 h-56 rounded-2xl ${linkToTableauProject !== "" ? "cursor-pointer" : ""}`}
+    href={linkToTableauProject || undefined}
+    target={linkToTableauProject ? "_blank" : undefined}
+    onClick={(event) => {
+      if (linkToTableauProject === "") {
+        event.preventDefault()
+      }
+    }}
   >
     <img
       src={image}
       alt={alt}
-      className="w-full h-full rounded-2xl bg-cover transition-transform duration-300 hover:scale-110"
+      className={`w-full h-full rounded-2xl bg-cover ${linkToTableauProject !== "" ? "transition-transform duration-300 hover:scale-110" : ""}`}
     />
   </a>
   <p className="text-lg sm:text-xl font-bold text-left w-full">{title}</p>

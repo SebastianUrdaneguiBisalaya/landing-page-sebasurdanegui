@@ -16,7 +16,7 @@ export default function Projects() {
           <TagProjects key={projectTag} title={projectTag} setFilterTag={setFilterTag} filterTag={filterTag} />
         ))}
       </div>
-      <div className="flex flex-row justify-start items-stretch w-full overflow-x-scroll snap-mandatory snap-x hidden-scroll scroll">
+      <div className="flex flex-row justify-start items-stretch w-full overflow-x-scroll snap-proximity snap-x hidden-scroll">
         {filteredProjects.map((project) => (
           <CardProjects
             key={project.id}
