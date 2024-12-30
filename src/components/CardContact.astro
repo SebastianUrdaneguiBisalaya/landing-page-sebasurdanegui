@@ -4,15 +4,17 @@ interface Props {
   alt: string;
   path: string;
   description: string;
+  pathToGo: string;
 }
-const { logo, alt, path, description } = Astro.props as Props;
+const { logo, alt, path, description, pathToGo } = Astro.props as Props;
 import linkedInColor from "@svg-icons/linkedInColor.svg";
 import gmail from "@svg-icons/gmail.svg";
 ---
 
 <a
   class="flex flex-col gap-2 justify-center items-center border-gray-custom border-2 rounded-2xl p-6 cursor-pointer hover:bg-white hover:text-black"
-  href={path}
+  href={pathToGo}
+  target="_blank"
 >
   <div>
     <img
