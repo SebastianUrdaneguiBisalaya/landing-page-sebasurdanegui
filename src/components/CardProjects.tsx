@@ -26,7 +26,7 @@ export default function CardProjects({title,
   linkToTableauProject}: Props) {
   return (
   <div
-  className="max-w-80 h-full flex flex-col justify-center items-center gap-4 p-6"
+  className="max-w-72 h-full flex flex-col justify-center items-center gap-4 p-6 snap-center"
 >
   <a
     className={`flex justify-center items-center w-64 h-56 rounded-2xl ${linkToTableauProject !== "" ? "cursor-pointer" : ""}`}
