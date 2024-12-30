@@ -372,7 +372,7 @@ export const projects: PropsProjects[] = [
     category: "Desarrollo web",
     title: "Backend para encontrar eventos en la ciudad",
     description:
-      "Muchas personas en todo el mundo sufren la falta de acceso a información sobre los acontecimientos que suceden en su zona. Este es un problema que queremos solucionar con nuestra idea.",
+      "Construcción de los endpoints de una API RESTful que serán servidas para la aplicación de búsqueda de eventos.",
     company: "Entretenimiento",
     image: image15.src,
     alt: "Image of Backend Code for Find Events app.",
@@ -403,7 +403,8 @@ export const projects: PropsProjects[] = [
     id: "16",
     category: "Desarrollo web",
     title: "Landing page para gimnasios",
-    description: "",
+    description:
+      "Es importante que los gimnasios tengan un sitio web que ofrezca mayor visibilidad y acceso a información sobre sus servicios.",
     company: "Gym24",
     image: image16.src,
     alt: "Image of Frontend Code for Gym24 landing page.",
@@ -430,7 +431,8 @@ export const projects: PropsProjects[] = [
     id: "17",
     category: "Desarrollo web",
     title: "Plataforma de streaming de películas y series",
-    description: "",
+    description:
+      "Aplicación para la búsqueda de películas y series en línea. Los datos son servidos por TheMovieDB API (TMDB).",
     company: "Entretenimiento",
     image: image17.src,
     alt: "Image of Movie Plataform Application.",
@@ -460,7 +462,8 @@ export const projects: PropsProjects[] = [
     id: "18",
     category: "Desarrollo web",
     title: "ToDo List App",
-    description: "",
+    description:
+      "Aplicación de gestión de tareas. Tiene como objetivo ayudar a los usuarios a tener un seguimiento de las actividades que se proponen a realizar.",
     company: "Organización y planificación",
     image: image18.src,
     alt: "Image of ToDo List Application.",
@@ -487,7 +490,8 @@ export const projects: PropsProjects[] = [
     id: "19",
     category: "Desarrollo web",
     title: "App de seguimiento de gastos",
-    description: "",
+    description:
+      "Aplicación para mejorar las finanzas personales. La aplicación permite a los usuarios registrar sus gastos, visualizar el patrón a lo largo del tiempo y analizar su comportamiento.",
     company: "Finanzas personales",
     image: image19.src,
     alt: "Image of Expense Tracker Application.",
@@ -514,7 +518,8 @@ export const projects: PropsProjects[] = [
     id: "20",
     category: "Desarrollo móvil",
     title: "App de asistencias escolares",
-    description: "",
+    description:
+      "Tiene como objetivo dar soporte a los docentes con la gestión de asistencias escolares mediante el escaneo de código QR y brindar reportes en tiempo real.",
     company: "Educación y Tecnología",
     image: image20.src,
     alt: "Image of Attendances Management School Application.",
@@ -539,8 +544,9 @@ export const projects: PropsProjects[] = [
   {
     id: "21",
     category: "Desarrollo móvil",
-    title: "App de registro de entradas y salidas de productos",
-    description: "",
+    title: "App Analytics",
+    description:
+      "Aplicación personalizada para gestionar eficientemente las entradas y salidas de productos, optimizando los procesos internos de una empresa proveedora de habas.",
     company: "Sector Productivo",
     image: image21.src,
     alt: "Image of inputs and outputs of products.",
