@@ -364,8 +364,9 @@ export const projects: PropsProjects[] = [
     ],
     linkToLinkedInProject: "",
     linkToGitHubProject:
-      "https://github.com/SebastianUrdaneguiBisalaya/App-To-Find-Events",
-    linkToTableauProject: "https://apptofindevents.vercel.app",
+      "https://github.com/SebastianUrdaneguiBisalaya/exploryq-platform",
+    linkToTableauProject:
+      "https://github.com/SebastianUrdaneguiBisalaya/exploryq-platform",
   },
   {
     id: "15",
@@ -395,9 +396,9 @@ export const projects: PropsProjects[] = [
     ],
     linkToLinkedInProject: "",
     linkToGitHubProject:
-      "https://github.com/SebastianUrdaneguiBisalaya/App-To-Find-Events-Backend",
+      "https://github.com/SebastianUrdaneguiBisalaya/exploryq-backend",
     linkToTableauProject:
-      "https://github.com/SebastianUrdaneguiBisalaya/App-To-Find-Events-Backend",
+      "https://github.com/SebastianUrdaneguiBisalaya/exploryq-backend",
   },
   {
     id: "16",
@@ -425,7 +426,8 @@ export const projects: PropsProjects[] = [
     linkToLinkedInProject: "",
     linkToGitHubProject:
       "https://github.com/SebastianUrdaneguiBisalaya/gym-landing-page",
-    linkToTableauProject: "https://gotothegym24.vercel.app",
+    linkToTableauProject:
+      "https://github.com/SebastianUrdaneguiBisalaya/gym-landing-page",
   },
   {
     id: "17",
@@ -455,8 +457,9 @@ export const projects: PropsProjects[] = [
     ],
     linkToLinkedInProject: "",
     linkToGitHubProject:
-      "https://github.com/SebastianUrdaneguiBisalaya/Movie-Streaming-Platform",
-    linkToTableauProject: "https://movie-streaming-platform-rho.vercel.app/",
+      "https://github.com/SebastianUrdaneguiBisalaya/stream-movies-platform",
+    linkToTableauProject:
+      "https://github.com/SebastianUrdaneguiBisalaya/stream-movies-platform",
   },
   {
     id: "18",
@@ -483,8 +486,9 @@ export const projects: PropsProjects[] = [
     ],
     linkToLinkedInProject: "",
     linkToGitHubProject:
-      "https://github.com/SebastianUrdaneguiBisalaya/1-project-task-manager-app-scrum",
-    linkToTableauProject: "https://mytaski.vercel.app/",
+      "https://github.com/SebastianUrdaneguiBisalaya/task-manager-app",
+    linkToTableauProject:
+      "https://github.com/SebastianUrdaneguiBisalaya/task-manager-app",
   },
   {
     id: "19",
@@ -511,8 +515,9 @@ export const projects: PropsProjects[] = [
     ],
     linkToLinkedInProject: "",
     linkToGitHubProject:
-      "https://github.com/SebastianUrdaneguiBisalaya/4-project-app-tracking-expenses-sprint-2",
-    linkToTableauProject: "https://tracking-expenses-app.vercel.app/",
+      "https://github.com/SebastianUrdaneguiBisalaya/tracking-expenses-platform",
+    linkToTableauProject:
+      "https://github.com/SebastianUrdaneguiBisalaya/tracking-expenses-platform",
   },
   {
     id: "20",
