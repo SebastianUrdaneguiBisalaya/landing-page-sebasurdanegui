@@ -1,7 +1,7 @@
 export const experienceItems = [
   {
-    title: "Founder",
-    company: "Dabifly",
+    title: "Freelancer",
+    company: "",
     fromDate: "Octubre 2023",
     toDate: "Actualidad",
     description: [
