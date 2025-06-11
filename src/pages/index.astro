@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import Layout from "@layouts/Layout.astro";
 import lineSvg from "@svg-icons/line.svg";
 import spanishIcon from "@svg-icons/spanish.svg";
@@ -15,9 +14,7 @@ import CardExperience from "@components/CardExperience.astro";
 import SocialMediaTag from "@components/SocialMediaTag.astro";
 import InfiniteSliderSkills from "@components/InfiniteSliderSkills.astro";
 import { experienceItems } from "@constants/experienceItems";
-import { servicesItems } from "@constants/servicesItem";
 import { contactItems } from "@constants/contactItems";
-import CardServices from "@components/CardServices.astro";
 import CardContact from "@components/CardContact.astro";
 import Projects from "@components/Projects";
 import Awards from "@assets-img/awards.webp";
@@ -53,9 +50,6 @@ import IconLandingPage from "@assets-img/icon-landing-page.webp";
             <a href="#projects-section" class="w-full h-full">Proyectos</a>
           </li>
           <li class="cursor-pointer hover:font-bold">
-            <a href="#services-section" class="w-full h-full">Servicios</a>
-          </li>
-          <li class="cursor-pointer hover:font-bold">
             <a href="#contact-section" class="w-full h-full">Contacto</a>
           </li>
         </ul>
@@ -85,14 +79,6 @@ import IconLandingPage from "@assets-img/icon-landing-page.webp";
         >
           <a href="#projects-section" class="flex flex-row w-full h-full"
             >Proyectos</a
-          >
-        </li>
-        <li
-          id="tag-go-to-section"
-          class="cursor-pointer w-full text-left rounded-lg py-2 px-4 hover:bg-primary hover:text-white hover:font-bold"
-        >
-          <a href="#services-section" class="flex flex-row w-full h-full"
-            >Servicios</a
           >
         </li>
         <li
@@ -444,28 +430,11 @@ import IconLandingPage from "@assets-img/icon-landing-page.webp";
       </div>
     </section>
     <section
-      id="services-section"
-      class="max-w-screen-xl px-5 w-full flex flex-col justify-center items-center gap-8 my-8"
-    >
-      <h2 class="text-2xl sm:text-3xl md:text-4xl text-left font-medium w-full">
-        ¿Empezamos a trabajar?
-      </h2>
-      <p
-        class="text-left text-txt-custom-gray w-full text-base sm:text-lg font-light"
-      >
-        Encuentra el servicio ideal para tus necesidades y comienza tu proyecto
-        conmigo.
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {servicesItems.map((service) => <CardServices {...service} />)}
-      </div>
-    </section>
-    <section
       id="contact-section"
       class="max-w-screen-xl px-5 w-full flex flex-col justify-center items-center gap-8 my-8"
     >
       <h2 class="text-2xl sm:text-3xl md:text-4xl text-left font-medium w-full">
-        Charlemos...
+        Charlemos
       </h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {contactItems.map((contact) => <CardContact {...contact} />)}
