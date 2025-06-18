@@ -4,7 +4,14 @@ interface Props {
   company: string;
   fromDate: string;
   toDate: string;
-  description: string[];
+  description: [
+    {
+      text: string;
+			company?: string;
+      isLink?: boolean;
+      link?: string;
+    },
+  ];
 }
 const { title, company, fromDate, toDate, description } = Astro.props as Props;
 ---
@@ -17,8 +24,27 @@ const { title, company, fromDate, toDate, description } = Astro.props as Props;
   </p>
   <br />
   {
-    description.map((item) => (
-      <p class="text-sm sm:text-base font-light leading-relaxed">• {item}</p>
-    ))
+    description.map((item) => {
+      if (item.isLink) {
+        return (
+          <a
+            class="text-sm sm:text-base font-light leading-relaxed cursor-pointer"
+						target="_blank"
+            href={item.link}
+          >
+            •
+							<span class="font-bold text-gray-100">{item.company}</span>
+							{item.text}
+          </a>
+					<br />
+        );
+      } else {
+        return (
+          <p class="text-sm sm:text-base font-light leading-relaxed">
+            • {item.text}
+          </p>
+        );
+      }
+    })
   }
 </div>
